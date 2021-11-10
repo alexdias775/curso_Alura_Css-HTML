@@ -1,0 +1,386 @@
+/* css da página inicial */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+	font-weight: bold;
+	/*color: rgba(0, 0, 0, 0.3); camada de opacidade, alfa, para cores rgb*/
+	/*text-shadow: 2px 2px #FF0000;
+	/*sombra para o texto, 2px p/ eixo x, 2px p/ o eixo y, #FF0000 cor vermelha*/
+}
+
+/*.titulo-principal:first-letter { /*reforça a primeira letra do titulo 
+	font-weight: bold;
+}
+
+.titulo-principal:before {
+	content: "[";
+}
+
+.titulo-principal:after {
+	content: "]";
+}*/
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE; /*cor menos gritante que o branco*/
+	width:  940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+
+.utensilios {
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888); 
+	/*faz a transição do laranja para o azul
+	posso mudar a inclinação do gradiente ou adicionar
+	mais cores para o gradiente
+	background: linear-gradient(orange,blue, red, black);
+	background: linear-gradient(45deg, orange, blue, red, black);  
+	pode-se ainda administrar a disposção das cores do gradiente
+	background: linear-gradient(45deg, 0 orange, 25% blue, 50% red, 75% black)
+	há também o gradiente circular. 
+	radial-gradient(orange,blue); 
+	*/
+}
+
+.mapa p {
+	margin: 0 0 2em; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	text-align: center;
+}
+
+.mapa-conteudo {
+	width:  940px;
+	margin: 0 auto;
+}
+
+.beneficios {
+	padding: 3em 0; /*espaçamento interno para ca e para baixo de 3em*/
+	background: #888888;
+	/*box-shadow: inset 0 0 30px #FFFFFF; /*sombra interna, usa-se inset*/
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios { 
+	width: 40%;
+	display: inline-block;
+	vertical-align: top; /*faz com que a lista fique alinhada pela parte de cima
+	e não pela parte de baixo*/
+}
+
+.itens {
+	line-height: 1.5;
+}
+
+.itens:first-child { /*significa que de todas as "crianças" da lista, que são irmãs, 
+						   se diz que o primeiro da lista será em negrito*/
+	font-weight: bold;
+}    /*criou-se uma pseudo class, é como se tivesse criado uma classe para marcar somente um item
+	 da lista, que antes do css3, era necessário criar realmente uma class somente para estilizar 
+	 um item da lista
+	 , mesmo a lista já tendo uma class. */
+
+.itens:before {
+	content: "🟊";
+}
+
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1; /*1 é 100%, 0.1 é 10%, 0.2 é 20% e daí a diante*/
+	box-shadow: 10px 10px 10px 0 #000000; /* -10px -10px yellow, -20px ; 
+	/*aplicado sombra em 10px no eixo X, 10px no eixo Y, a terceira proprieda
+	é o grau de espalhamento, o quarto elemento, intesidade da borda, o quão mais 
+	ela vai se espalhar e na cor preta #0000. tamém dá pra adicionar outras sombras
+	adicionando uma vírgula. */
+}
+
+.imagem-beneficios:hover { /*quando o mouse estiver por cima*/
+	opacity: 0.3; /*1 é 100%, 0.1 é 10%, 0.2 é 20% e daí a diante*/
+	transition: 400ms;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+/* css da página produto e contatos*/ 
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa	{
+	position: relative;
+	/*O position relative: posiciona o elemento em relação a si mesmo. Ou seja, o ponto 
+	zero será o canto superior esquerdo, e ele começará a contar a partir dali. Todos os 
+	positions precisam de um ponto para iniciar o cálculo da coordenada para assim 
+	posicionar o elemento na tela. Ao contrário do que muitos acham, esse ponto não é o 
+	ponto central do elemento, o ponto base é o canto superior esquerdo do elemento. A 
+	partir deste canto, o browser irá calcular a coordenada que você definiu e irá posicionar 
+	o elemento no viewport.*/
+	width: 940px;
+	margin: auto; /*dimensiona o espaçamento do conteúdo entre as margens de forma igual*/
+}
+
+nav {
+	position: absolute;
+	/*O Position Absolute: é um tanto diferente do Relative. Enquanto o elemento com Position
+	Relative utiliza seu próprio canto para referenciar sua posição, o elemento com Position 
+	Absolute se utiliza do ponto superior esquerdo de outros elementos. Estes elementos são os 
+	parentes dele do elemento com position absolute. Mais especificamente o pai.*/
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+}
+
+nav a {
+	text-transform: uppercase; /*tranformando visualmente em maíusculo todos os links*/  
+	color: #000000; /*cor preta*/
+	font-weight: bold; /*peso da fonte, deixando em negrito*/
+	font-size: 22px; /*tamanho da fonte*/
+	text-decoration: none; /*retirando qualquer decoração, essa decoração que nesse momento está deixando o texto sublinhado*/	
+}
+
+nav a:hover{ /*"hover" capta quando o mouse está por cima do que eu escolhi para mapear*/
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto; 
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box; /*dessa forma, o 30% de largura(witdh) serão sempre 30% e não se somará com o pixel do padding*/
+	border: 2px solid #000000; /*largura, tipo, cor*/
+	border-radius: 10px; /*aplica arredondamento nas bordas da caixa*/
+} 
+
+.produtos li:hover { /*capta o movimento do mouse quando passa por cima do bloco de navagação e altera conforme configurarmos.*/
+	border-color: #C78C19;
+}
+
+.produtos li:active { /*capta o clique do mouse em cima do item que especificarmos e o altera conforme configurarmos*/
+	border-color: #088C19;
+}
+
+.produtos li:hover h2 { /*quando o mouse estiver sobre os produtos, alterar o h2*/
+	font-size: 32px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+footer {
+	text-align: center;              
+	background: url("bg.jpg"); 
+	/* 1° obs: essa imagem foi colocada através do css pois ela é uma imagem de fundo.
+	2° obs:  foi usada uma imagem pequena, que possui um tamanho pequeno e o css, por
+	padrão replicou essa imagem até preencher o espaço do bloco. 
+	É interessante fazer isso ao invés de uma imagem grande, que no fim pode consumir muita banda do usuário. */
+	padding: 40px 0; /*40px para cima e para baixo e 0 para os lados*/
+}
+
+.Copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+main {
+	
+}
+
+form {
+	margin: 40px 10px;
+	padding: 0 0 0 0px;
+}
+
+form label, fieldset legend {
+	/*quando queremos aplicar a configuração de um elemento, e queremos
+	replicar a mesma configuração para outro elemento, usamos a virgula*/
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+}
+
+.input-padrao { 
+	display: block;
+	margin: 0 0 10px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+} 
+
+.enviar {
+	width: 40%;
+	padding: 15px 0; /*15 pixes para cima e para baixo e 0 para os lados*/
+	background: orange;
+	color: white; /*cor do texto*/
+	font-weight: bold; /*negrito*/
+	font-size: 18px; /*fonte maior*/
+	border: none; /*nenhuma borda*/
+	border-radius: 5px; /*canto arredondado*/
+	transition: 1s all; /*a transição de todos os elementos acontecerá em 1s*/ 
+	cursor: pointer; 
+	/* quando o mouse passar por cima a figura do mouse muda, ao invés de seta, uma mão*/
+}
+
+.enviar:hover {
+	background: darkorange;
+	/*transform: scale(1.2); 
+	quando se colocar mouse sobre o botão enviar, o botão aumentar em 20%.
+	para isso, se usar a propriedade "transform" e o valor dentro dela é o scale(1.0)
+	e nesse caso queremos que aumente em 20%, o calculo é feito prorpocional, multipli-
+	cando por 1.2.
+	transform: rotate(70deg); 
+	a leitura das propriedades é feita de cima para baixo, e quando há repetição de propriedades
+	uma subescreve a outra. logo a forma correta para validar tanto o scale e rotate da propriedade
+	do transform é demonstrada a seguir: */
+	/*transform: rotate(360deg) scale(1.2);*/
+	transform: scale(1.2);
+
+}
+
+
+table {
+	margin: 20px 0 40px 10px; /*20px para cima, 0 para os lados e 40 px para baixo**/
+}
+
+thead {
+	background: #555555;
+	color:  white;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .mapa-conteudo, .conteudo-beneficios, .video, .produtos {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+
+	}
+
+	nav ul {
+		text-align: center;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+
+	.produtos li { 
+		display: block;
+		width: 70%;
+		text-align: center;
+		margin: 5% auto;
+	}
+
+	form {
+		/*margin: 40px 0 40px 5px;*/
+		padding: 0 5px;
+	}
+
+	form label {
+		margin: 0 0 10px 5px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	}
+
+	.input-padrao { 
+		width: 80%;
+		margin: 0 0 11px 0; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	}
+
+	fieldset {
+		margin: 0 0 0 5px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	}
+
+	.checkbox {
+		margin: 20px 0 20px 5px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	}
+
+	.enviar {
+		margin: 0 0 0 5px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	}
+
+	.enviar:hover {
+		margin: 0 0 0 5px; /* 1° p/ o topo, 2° p/ direita, 3° p/ baixo e 4° p/ esquerda*/
+	}
+
+	table {
+	margin: 20px 0 40px 5px; /*20px para cima, 0 para os lados e 40 px para baixo**/
+}
+}

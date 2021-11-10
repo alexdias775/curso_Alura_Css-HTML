@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<htmlL lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Contato - Barbearia Alura</title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display">
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+				<!-- Quando se fala em acessibilidade, é importante falar do campo alt em imagens, alt
+					é uma alternativa. Pra quem não consegue ver a imagem, ou se a imagem não está 
+					carregando corretamente, qual alternativa para isso, aí se usa o alt para descrever 
+					a imagem.  É importante fazer isso para que o site se tenha a maior acessibilidade 
+					´possível-->
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<form> <!--tag de formulário-->
+				<label for="nomesobrenome">Nome e sobrenome</label> 
+				<!--dentro do formulário se usa uma etiqueta para input--> 
+				<!-- quando coloco a etiqueta, o usuário não precisa clicar 
+					precisamente no campo, basta clicar no nome que ele terá 
+					o campo já disponível para preencher.-->
+					<!--toda vez que tem um input, tem um label-->
+				<input type="text" id="nomesobrenome" class="input-padrao" required > 
+				<!-- * required torna o campo de preenchimento obrigatório
+				     * geralmente um input é único, por exemplo nesse caso, 
+					vai haver somente uma entrada para nome e sobrenome--> 
+
+				<label for="email">Email</label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> 
+				<!-- * usa-se placeholder="" para preencher um campo até que digite algo nesse campo Espécie de
+					texto de exemplo. 
+					 * colocando o type correto, facilita a vida dos usuários
+					em questão de acessibilidade do teclado, uma boa prática, 
+					iss é válido também para o label telefone e outro-->
+
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<label for="mensagem">Mensagem</label>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea> 
+				<!--essa tag permite colocar mais de uma linha de texto, é uma tag de 
+					conteúdo, diferente de input, por isso ela abre <textarea> e fecha 
+					com </textarea> -->
+				<!-- há como configurar quantas colunas e linhas essa caixa terá através
+					dos seguites comandos, cols para colunas e rows para linha-->
+
+
+				<!--quando se quer agrupar campos e que esses campos tenham títulos, usa-se tags especificas para tal,
+				necessidade. Essa tag deixará o formulário melhor escrito, no caso, no código. A tag especifíca a ser
+				utilizada é fieldset. Então quando se temos vários campos referentes a alguma coisa, não se usa a tag div, usa-se a tag fieldset. Ela é referente a configuração daqueles campos, de um ou mais campos referentes a um assunto especifico-->
+
+				<fieldset>
+					<legend>Como prefere o nosso contato</legend>
+					<!--dentro de um fieldset não se tem paragrafo, se tem o título, e o título de um fieldset
+						é chamado de legend-->
+					<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> Email</label>
+					<!--a configuração name="" faz com quem todos do tipo radio passem a ser
+						do mesmo grupo e quando clicar em um, desmarca o outro, como no nosso 
+						caso, temos três opções, email, telefone e Whatsapp.-->
+
+					<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+					
+					<label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label> <!-- palavra reservada checked é usada para ser marcar uma opção em primeiro momento dentre as que estão disponibilizadas. -->
+				</fieldset>
+
+				<fieldset>
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</fieldset>	
+
+				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidade por email?</label>
+
+				<input type="submit" value="Enviar formulário" class="enviar">
+			</form>
+
+			<table> 
+				<!--tag utilizada para criar tabelas
+					se usa as tags a seguir para se dividir
+					a tabela de forma mais semântica-->
+				<thead> <!--cabeçalho da tabela-->
+					<tr> <!--linhas-->
+						<th colspan="2">Dia</th> <!--th representa a célula do cabeçalho da tabela-->
+						<th>Horário</th>
+					</tr>
+				</thead>
+
+				<tbody> <!--corpo da tabela-->
+					<tr>
+						<td colspan="2">Segunda-Feira</td> 
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>	
+						<td colspan="2">Quarta-Feira</td>  
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td colspan="2">Sexta - Feira</td> 
+						<td>8h ~ 20h</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+
+		<footer> <!--tag do rodapé-->
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="Copyright">&copy; Copyright Barbearia Alura - 2019</p>
+		</footer>
+	</body>
+</htmlL>

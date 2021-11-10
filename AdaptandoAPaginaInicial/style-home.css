@@ -1,0 +1,54 @@
+.caixa	{
+	position: relative;
+	width: 940px;
+	margin: auto; /*dimensiona o espaçamento do conteúdo entre as margens de forma igual*/
+}
+
+#banner{
+	width: 100%;
+}
+
+.titulo-principal{
+	padding-left: 20px;
+}
+
+.principal{
+	background: #CCCCCC;
+	padding: 30px;
+}
+
+.titulo-centralizado{
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+#missao{
+	font-size: 20px;
+}
+
+em strong {
+	color: Red;
+}  
+
+ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	margin-right: 15%;
+} 
+
+.itens {
+	font-style: italic;
+}
+
+.beneficios{
+	background: #FFFFFF;
+	padding: 20px;
+}
+
+.imagembeneficios{
+	width: 50%;
+}
